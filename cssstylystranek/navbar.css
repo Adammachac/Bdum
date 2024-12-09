@@ -1,0 +1,150 @@
+/* Celkový vzhled navbaru */
+.navbar {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    overflow: hidden; /* Skrytí přetečení obsahu */
+}
+
+/* Container pro navbar a obsah stránky */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+/* Left-side (Logo a kontakt) */
+.left-side {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* mezera mezi logem a kontaktem */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.contact-info p {
+    margin: 0;
+    color: #fff;
+}
+
+/* Navigační menu */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    margin-left: 20px; /* Přidání prostoru před položkami menu */
+    transition: transform 0.3s ease; /* Plynulý posun při interakci */
+}
+
+.navbar-menu li {
+    font-size: 16px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbar-menu a:hover {
+    background-color: #f0a500; /* Zlatá pro hover efekt */
+    color: #333;
+}
+
+/* Boční lišta pro zakrytí textu */
+.navbar-menu.hidden {
+    transform: translateX(100%); /* Posuneme menu doprava, aby byl text zakrytý */
+}
+
+/* Mobilní zobrazení */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Zobrazení menu na mobilu */
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .navbar-menu.show {
+        display: flex;
+        transform: translateX(0); /* Zobrazíme menu */
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .left-side {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact-info {
+        display: none;
+    }
+}
+
+/* Hlavní obsah stránky - zajištění, že nebude překrytý navbaru */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    margin-top: 70px; /* Toto zajistí, že obsah bude začínat pod navbaru */
+}

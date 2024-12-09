@@ -1,0 +1,272 @@
+/* Celkový vzhled stránky a písma */
+body {
+    font-family: 'Poppins', sans-serif; /* Používáme Poppins pro většinu textů */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Recenze a další texty */
+.reviews h2,
+.showcase h1,
+.testimonial-slider .review-item p {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Specifické písmo pro kontaktní informace */
+.contact-info p {
+    font-family: 'Roboto', sans-serif; /* Pro kontakt použijeme Roboto */
+    font-size: 14px;
+}
+
+/* Další stylování pro showcase a recenze */
+.showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: #f7f7f7;
+    color: #333;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.showcase-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.showcase-logo img {
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/* Styl pro sekci O nás */
+.about-us {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+}
+
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Nadpisy v sekci O nás */
+.about-us h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Tělo textu v sekci O nás */
+.about-us p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 900px;
+    margin: 0 auto 20px;
+}
+
+/* Sekce s texty a obrázky střídavě na levé a pravé straně */
+.about-us-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.about-us-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-us-text:nth-child(odd) {
+    order: 1;
+}
+
+.about-us-text:nth-child(even) {
+    order: 2;
+}
+
+.about-us-image {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-us-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Malé úpravy pro mobilní verzi */
+@media screen and (max-width: 768px) {
+    .about-us h2 {
+        font-size: 2rem;
+    }
+
+    .about-us p {
+        font-size: 1rem;
+    }
+
+    .about-us-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-us-text {
+        text-align: center;
+    }
+}
+
+/* Recenze */
+.reviews {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 40px;
+}
+
+.reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden; /* Skrytí částí mimo obrazovku */
+    position: relative;
+    width: 100%;
+}
+
+.testimonial-slider-wrapper {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Plynulý posun */
+}
+
+.review-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+
+.review-item:hover {
+    transform: translateY(-5px);
+    opacity: 1;
+}
+
+.review-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.review-item p:last-child {
+    font-style: italic;
+    color: #777;
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #f0a500;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s;
+    margin-top: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button:hover {
+    background-color: #e38e00;
+}
+
+/* Styl pro animace */
+@keyframes textAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    animation: textAppear 1s ease-out forwards;
+}
+
+/* Sekce o nás s fotkami a textem */
+.about-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 48%;
+    margin-bottom: 20px;
+}
+
+.about-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.about-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-column p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .about-column {
+        max-width: 100%;
+    }
+}
