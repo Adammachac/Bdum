@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./cssstylystranek/style.css">
     <link rel="stylesheet" href="./cssstylystranek/navbar.css">
 </head>
+<body> <!-- Otevření tagu body -->
+
 <header>
     <nav class="navbar">
         <div class="navbar-container">
@@ -26,10 +28,10 @@
 
             <!-- Navigační menu -->
             <ul class="navbar-menu">
-                <li><a href="#">Zabezpečovací systémy</a></li>
-                <li><a href="#">Kamery</a></li>
-                <li><a href="#">Chytrá domácnost</a></li>
-                <li><a href="#">Facebook</a></li>
+                <li><a href="#zabezpecovaci-systémy">Zabezpečovací systém</a></li>
+                <li><a href="#kamery">Kamerové systémy</a></li>
+                <li><a href="#chytro-dum">Wi-Fi pro celý dům</a></li>
+                <li><a href="#facebook">Chytrý Dům LOXONE</a></li>
             </ul>
 
             <!-- Mobilní menu -->
@@ -42,57 +44,114 @@
     </nav>
 </header>
 
-
-    <section class="hero">
-        <h1>Chytrá a bezpečná domácnost</h1>
-        <p>Jsme oficiálním partnerem Jablotron a Hikvision. Zabezpečení, komfort a inovace na dosah ruky.</p>
-        <button id="cta-button">Zjistit více</button>
-    </section>
-
-    <section class="services">
-        <h2>Naše služby</h2>
-        <div class="service-item">
-            <h3>Zabezpečovací systémy</h3>
-            <p>Připojení na pult centrální ochrany, špičková bezpečnost pro váš domov i firmu.</p>
+<section class="showcase">
+    <div class="showcase-content">
+        <div class="showcase-logo">
+            <img src="./images/logo_BD_png_Kreslici platno 1 kopie 2.png" alt="BDUM Logo">
         </div>
-        <div class="service-item">
-            <h3>Kamerové systémy</h3>
-            <p>Barevné vidění ve dne i v noci, virtuální plot a aktivní zastrašování.</p>
-        </div>
-        <div class="service-item">
-            <h3>Chytrá domácnost</h3>
-            <p>Automatizace, ovládání žaluzií, Wi-Fi a další technologie od Loxone.</p>
-        </div>
-    </section>
+        <h1>Vítejte na stránkách BDUM</h1>
+    </div>
+</section>
 
-    <section class="testimonials">
-        <h2>Co říkají naši zákazníci</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial">
-                <p>"Spolupráce s BDUM byla bezchybná, vše perfektně funguje. Doporučujeme!"</p>
-                <footer>– Filip a Kateřina, Ostrava</footer>
+<section id="zabezpecovaci-systémy" class="about-us">
+    <div class="about-us-container">
+        <h2>O nás</h2>
+
+        <div class="about-us-content">
+            <div class="about-us-text">
+                <h3>Zabezpečovací systém</h3>
+                <p>Jsme oficiálním montážním partnerem firmy Jablotron a certifikovaným partnerem firmy Hikvision, špičkou v zabezpečovacích systémech nejen v České republice - připojíme Vás přímo na pult centrální ochrany!</p>
             </div>
-            <div class="testimonial">
-                <p>"Zabezpečovací systém i kamery fungují skvěle. Vše nainstalováno rychle a profesionálně."</p>
-                <footer>– Jan Novák, Opava</footer>
-            </div>
-            <div class="testimonial">
-                <p>"Chytrá domácnost mi ulehčila život, mohu ovládat všechno jedním kliknutím. Děkuji BDUM!"</p>
-                <footer>– Petra Dvořáková, Brno</footer>
+            <div class="about-us-image">
+                <img src="images/zabezpecovaci-system.jpg" alt="Zabezpečovací systém">
             </div>
         </div>
-    </section>
-    
 
-    <footer>
-        <p>© 2024 BDUM - Všechna práva vyhrazena</p>
-        <div class="socials">
-            <a href="#"><img src="../images/facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="../images/twitter-icon.png" alt="Twitter"></a>
+        <div class="about-us-content" id="kamery">
+            <div class="about-us-text">
+                <h3>Kamerové systémy</h3>
+                <p>Jsme certifikovanou montážní firmou značky HIKVISION a DAHUA, předními světovými leadery CCTV - aktivní zastrašování, barevné vidění ve dne i v noci, virtuální plot.</p>
+            </div>
+            <div class="about-us-image">
+                <img src="images/kamerove-systemy.jpg" alt="Kamerové systémy">
+            </div>
         </div>
-    </footer>
 
-    <script src="./jssoubory/scripts.js"></script>
+        <div class="about-us-content" id="chytro-dum">
+            <div class="about-us-text">
+                <h3>Wi-Fi pro celý dům</h3>
+                <p>Zasíťujeme celý Váš dům i zahradu bezpečným Wi-Fi systémem, na který se můžete spolehnout. Jediná Wi-Fi pro celou domácnost.</p>
+            </div>
+            <div class="about-us-image">
+                <img src="images/wifi-pro-dum.jpg" alt="Wi-Fi pro celý dům">
+            </div>
+        </div>
 
-</body>
+        <div class="about-us-content">
+            <div class="about-us-text">
+                <h3>Chytrý Dům LOXONE</h3>
+                <p>Věnujeme se přípravě, realizaci, programování a integraci systému Loxone a prvků třetích stran pro všechny typy budov.</p>
+            </div>
+            <div class="about-us-image">
+                <img src="images/loxone.jpg" alt="Chytrý dům LOXONE">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="reviews">
+    <h2>Recenze našich zákazníků</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial-slider-wrapper">
+            <div class="review-item">
+                <p>"Skvělý produkt, opravdu jsem spokojený s instalací kamerového systému!"</p>
+                <p>- Jan Novák</p>
+            </div>
+            <div class="review-item">
+                <p>"Děkujeme za rychlou a profesionální instalaci zabezpečovacího systému."</p>
+                <p>- Petra S.</p>
+            </div>
+            <div class="review-item">
+                <p>"Doporučuji, Wi-Fi v domě funguje perfektně a pokrytí je skvělé!"</p>
+                <p>- Martin K.</p>
+            </div>
+            <div class="review-item">
+                <p>"Opravdu efektivní chytrý dům s LOXONE, změnilo nám to život!"</p>
+                <p>- Alice T.</p>
+            </div>
+            <div class="review-item">
+                <p>"Výborná kvalita kamer, noční vidění je úžasné!"</p>
+                <p>- Roman L.</p>
+            </div>
+            <div class="review-item">
+                <p>"Velmi spokojeni s celkovou službou, vše bylo rychlé a efektivní."</p>
+                <p>- Klára F.</p>
+            </div>
+            <div class="review-item">
+                <p>"Pěkný design kamerového systému, snadná instalace a skvělá podpora."</p>
+                <p>- Marek P.</p>
+            </div>
+            <div class="review-item">
+                <p>"Super, Wi-Fi pokrytí je opravdu stabilní, doporučuji pro celou rodinu!"</p>
+                <p>- Jana M.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <button class="cta-button">Kontaktujte nás</button>
+</section>
+
+<footer> <!-- Uzavření footer tagu -->
+    <p>© 2024 BDUM - Všechna práva vyhrazena</p>
+    <div class="socials">
+        <a href="#"><img src="../images/facebook-icon.png" alt="Facebook"></a>
+    </div>
+</footer>
+
+<script src="./jssoubory/scriptshowcase.js"></script>
+<script src="js/smoothscroll.js"></script>
+</body> <!-- Uzavření body tagu -->
 </html>
