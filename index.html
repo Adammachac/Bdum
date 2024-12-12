@@ -30,8 +30,8 @@
             <ul class="navbar-menu">
                 <li><a href="#zabezpecovaci-systémy">Zabezpečovací systém</a></li>
                 <li><a href="#kamery">Kamerové systémy</a></li>
-                <li><a href="#chytro-dum">Wi-Fi pro celý dům</a></li>
-                <li><a href="#facebook">Chytrý Dům LOXONE</a></li>
+                <li><a href="#wifi-pro-dum">Wi-Fi pro celý dům</a></li>
+                <li><a href="#chytry-dum-loxone">Chytrý Dům LOXONE</a></li>
             </ul>
 
             <!-- Mobilní menu -->
@@ -63,7 +63,7 @@
                 <p>Jsme oficiálním montážním partnerem firmy Jablotron a certifikovaným partnerem firmy Hikvision, špičkou v zabezpečovacích systémech nejen v České republice - připojíme Vás přímo na pult centrální ochrany!</p>
             </div>
             <div class="about-us-image">
-                <img src="images/zabezpecovaci-system.jpg" alt="Zabezpečovací systém">
+                <img src="images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Zabezpečovací systém">
             </div>
         </div>
 
@@ -73,27 +73,27 @@
                 <p>Jsme certifikovanou montážní firmou značky HIKVISION a DAHUA, předními světovými leadery CCTV - aktivní zastrašování, barevné vidění ve dne i v noci, virtuální plot.</p>
             </div>
             <div class="about-us-image">
-                <img src="images/kamerove-systemy.jpg" alt="Kamerové systémy">
+                <img src="images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Kamerové systémy">
             </div>
         </div>
 
-        <div class="about-us-content" id="chytro-dum">
+        <div class="about-us-content" id="wifi-pro-dum">
             <div class="about-us-text">
                 <h3>Wi-Fi pro celý dům</h3>
                 <p>Zasíťujeme celý Váš dům i zahradu bezpečným Wi-Fi systémem, na který se můžete spolehnout. Jediná Wi-Fi pro celou domácnost.</p>
             </div>
             <div class="about-us-image">
-                <img src="images/wifi-pro-dum.jpg" alt="Wi-Fi pro celý dům">
+                <img src="images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Wi-Fi pro celý dům">
             </div>
         </div>
 
-        <div class="about-us-content">
+        <div class="about-us-content" id="chytry-dum-loxone">
             <div class="about-us-text">
                 <h3>Chytrý Dům LOXONE</h3>
                 <p>Věnujeme se přípravě, realizaci, programování a integraci systému Loxone a prvků třetích stran pro všechny typy budov.</p>
             </div>
             <div class="about-us-image">
-                <img src="images/loxone.jpg" alt="Chytrý dům LOXONE">
+                <img src="images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Chytrý dům LOXONE">
             </div>
         </div>
 
@@ -140,18 +140,49 @@
     </div>
 </section>
 
-<section>
-    <button class="cta-button">Kontaktujte nás</button>
+<section class="contact-section">
+    <div class="contact-option">
+        <h3>Nevíte, co přesně byste chtěli nebo potřebovali?</h3>
+        <p>Zanechte nám kontakt a my se Vám ozveme.</p>
+        <form action="process-form1.php" method="POST" class="contact-form">
+            <label for="name1">Vaše jméno:</label>
+            <input type="text" id="name1" name="name" required>
+            
+            <label for="contact1">Váš e-mail nebo telefon:</label>
+            <input type="text" id="contact1" name="contact" required>
+            
+            <button type="submit">Odeslat</button>
+        </form>
+    </div>
+    <div class="contact-option">
+        <h3>Víte, co byste přibližně chtěli?</h3>
+        <p>Vyplňte formulář pod tímhle textem a my se Vám ozveme.</p>
+        <form action="process-form2.php" method="POST" class="contact-form">
+            <label for="requirements">Vaše požadavky:</label>
+            <textarea id="requirements" name="requirements" required></textarea>
+            
+            <label for="name2">Vaše jméno:</label>
+            <input type="text" id="name2" name="name" required>
+            
+            <label for="contact2">Váš e-mail nebo telefon:</label>
+            <input type="text" id="contact2" name="contact" required>
+            
+            <button type="submit">Odeslat</button>
+        </form>
+    </div>
 </section>
 
+
 <footer> <!-- Uzavření footer tagu -->
+    <div class="about-us-image">
+        <a href="#"><img src="./images/logo_BD_png-06.png" alt="logo"></a>
+   
     <p>© 2024 BDUM - Všechna práva vyhrazena</p>
-    <div class="socials">
-        <a href="#"><img src="../images/facebook-icon.png" alt="Facebook"></a>
     </div>
 </footer>
 
 <script src="./jssoubory/scriptshowcase.js"></script>
 <script src="./jssoubory/smoothscroll.js"></script>
+<script src="./jssoubory/hamburgermenu.js"></script>
 </body> <!-- Uzavření body tagu -->
 </html>

@@ -8,7 +8,7 @@ clonedReviews.forEach(review => sliderWrapper.appendChild(review)); // Přidáme
 // Funkce pro plynulý posun
 function moveReviews() {
     const totalWidth = sliderWrapper.scrollWidth;
-    sliderWrapper.style.transition = 'transform 10s linear'; // Rychlost posuvu
+    sliderWrapper.style.transition = 'transform 20s linear'; // Rychlost posuvu
     sliderWrapper.style.transform = `translateX(-${reviews[0].offsetWidth * reviews.length}px)`; // Posuneme o šířku všech recenzí
 
     // Po dokončení animace resetujeme posun na začátek
@@ -18,7 +18,7 @@ function moveReviews() {
 
         // Po resetu znovu spustíme animaci plynule
         setTimeout(moveReviews, 100); // Spustíme další animaci okamžitě
-    }, 10000); // Po 10 sekundách (délka animace posuvu)
+    }, 20000); // Po 10 sekundách (délka animace posuvu)
 }
 
 // Inicializace posuvu po načtení stránky
