@@ -166,9 +166,17 @@ h1 {
 
 .testimonial-slider-wrapper {
     display: flex;
-    animation: slide 25s infinite linear;
+    animation: slide 40s infinite linear;
 }
 
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 .review-item {
     min-width: 300px;
     padding: 20px;
