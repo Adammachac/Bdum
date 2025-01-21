@@ -439,34 +439,6 @@ h1 {
 .faq-item.open p {
     display: block; /* Zobrazení odpovědi při rozbalení */
 }
-
-/* Styl tlačítka dark mode */
-#darkModeToggle {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    background-color: #4b9cd3; /* Hlavní barva tlačítka */
-    color: #ffffff; /* Barva textu */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín */
-}
-
-/* Efekt při najetí myší */
-#darkModeToggle:hover {
-    background-color: #3578b2; /* Tmavší odstín při hover */
-    transform: translateY(-2px); /* Mírný pohyb nahoru */
-}
-
-/* Efekt při stisknutí */
-#darkModeToggle:active {
-    background-color: #2a5d86; /* Ještě tmavší odstín */
-    transform: translateY(1px); /* Jemný pohyb dolů */
-}
-
 /* Sekce technické specifikace */
 #technicke-specifikace.new-style {
     background: #f4f7fb;
