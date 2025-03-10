@@ -1,13 +1,3 @@
-/* Výchozí světlý režim */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #87DFE1;
-    color: #222;
-}
-
 /* Dark mode - celý web */
 body.dark-mode {
     background-color: #1a1a1a; /* Tmavé pozadí */
@@ -15,57 +5,22 @@ body.dark-mode {
 }
 
 /* Showcase sekce */
-.showcase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
-    background-color: #fff; /* Bílé pozadí */
-    color: #444;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
 body.dark-mode .showcase {
     background-color: #2a2a2a; /* Tmavé pozadí */
     color: #e0e0e0; /* Světlejší text */
 }
 
 /* O nás sekce */
-.about-us {
-    background-color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
 
 body.dark-mode .about-us {
     background-color: #2a2a2a;
     color: #e0e0e0;
 }
 
+body.dark-mode .about-us-text {
+    background-color: #1a1a1a;
+}
 /* FAQ sekce */
-.faq {
-    padding: 40px 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.faq-container {
-    max-width: 800px;
-    margin: auto;
-    text-align: left;
-}
-
-.faq-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: #f9f9f9;
-}
-
 body.dark-mode .faq {
     background-color: #1a1a1a;
 }
@@ -76,23 +31,10 @@ body.dark-mode .faq-item {
 }
 
 /* Recenze sekce */
-.reviews {
-    padding: 50px 20px;
-    background-color: #fff;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
 
 body.dark-mode .reviews {
     background-color: #121212;
     color: #e0e0e0; /* Bílý text v tmavém režimu */
-}
-
-.review-item {
-    background-color: #59F8CA;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode .review-item {
@@ -110,9 +52,6 @@ body.dark-mode .review-item p:last-child {
 
 
 /* Tlačítka a odkazy */
-button, a {
-    transition: background-color 0.3s, color 0.3s;
-}
 
 button:hover, a:hover {
     opacity: 0.8;
@@ -129,22 +68,7 @@ body.dark-mode button:hover {
 }
 
 /* Kontakt sekce */
-.contact-section {
-    padding: 50px 20px;
-    background-color: #1CFEBA;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    flex-wrap: wrap;
-}
 
-.contact-column {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 body.dark-mode .contact-section {
     background-color: #1a1a1a;
@@ -219,8 +143,6 @@ body.dark-mode #darkModeToggle:active {
 body.dark-mode #technicke-specifikace {
     background-color: #2a2a2a; /* Tmavé pozadí pro sekci */
     color: #e0e0e0; /* Světlý text */
-    padding: 40px 20px;
-    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -232,7 +154,6 @@ body.dark-mode #technicke-specifikace h3 {
 body.dark-mode #technicke-specifikace .spec-item {
     background-color: #333; /* Tmavší pozadí pro položky */
     border: 1px solid #444; /* Tmavý okraj */
-    padding: 15px;
     border-radius: 5px;
     margin-bottom: 20px;
 }
@@ -265,43 +186,49 @@ body.dark-mode .reason img {
 
 /* Sekce pro formulář */
 body.dark-mode .contact-section {
-    background-color: #121212;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    background-color: #1e1e1e;
 }
 
 body.dark-mode .contact-option {
-    background-color: #1c1c1c;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    background-color: #2b2b2b;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 body.dark-mode .contact-option h3 {
     color: #e0e0e0;
 }
 
-body.dark-mode .contact-form input,
-body.dark-mode .contact-form textarea {
-    background-color: #1c1c1c;
-    color: #f5f5f5;
-    border: 1px solid #333;
+body.dark-mode .contact-option p {
+    color: #e0e0e0;
 }
 
-body.dark-mode .contact-form input::placeholder,
-body.dark-mode .contact-form textarea::placeholder {
-    color: #888;
+body.dark-mode .contact-form label {
+    color: #b3b3b3;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea,
+body.dark-mode .contact-form select {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus,
+body.dark-mode .contact-form select:focus {
+    border-color: #4b9cd3;
+    box-shadow: 0 0 5px rgba(75, 156, 211, 0.5);
+    outline: none;
 }
 
 body.dark-mode .contact-form button {
-    background-color: #333;
-    color: #f5f5f5;
+    background-color: #4b9cd3;
+    color: #fff;
 }
 
 body.dark-mode .contact-form button:hover {
-    background-color: #555;
-}
-
-body.dark-mode .contact-column:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
-    border-color: #444;
+    background-color: #3578b2;
 }
 
 /* Footer */

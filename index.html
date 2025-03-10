@@ -2,6 +2,8 @@
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Adam Macháč">
+    <meta name="keywords" content="Bezpečný dům, chytrá domácnost, zabezpečení, technologie, Bdum">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BDUM - Chytrá a bezpečná domácnost</title>
     <link rel="stylesheet" href="./cssstylystranek/style.css">
@@ -38,7 +40,24 @@
                 <li><a href="#chytry-dum-loxone"><i class="fas fa-home"></i> Chytrý Dům LOXONE</a></li>
                 <li><a href="#realizace"><i class="fas fa-thumbs-up"></i> Realizace</a></li>
                 <li><a href="#contact-form" id="contactButton">Kontakt</a></li>
-                <li><button id="darkModeToggle">Darkmode</button></li>
+                <li>
+                    <label for="theme" class="theme">
+                        <span class="theme__toggle-wrap">
+                            <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+                            <span class="theme__fill"></span>
+                            <span class="theme__icon">
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                                <span class="theme__icon-part"></span>
+                            </span>
+                        </span>
+                    </label></li>
             </ul>
             
 
@@ -58,16 +77,16 @@
             <img src="./images/logo_BD_png_Kreslici platno 1 kopie 2.png" alt="BDUM Logo">
         </div>
         <h1></i> Vítejte na stránkách Bezpečného Domu</h1>
-
     </div>
     
 </section>
 
+<!-- O nás -->
 <section id="zabezpecovaci-systémy" class="about-us">
     <div class="about-us-container">
         <h2><i class="fas fa-info-circle"></i> O nás</h2>
 
-        <div class="about-us-content">
+        <div class="about-us-content" id="o-nás">
             <div class="about-us-text">
                 <h3><i class="fas fa-lock"></i> Zabezpečovací systémy</h3>
                 <p>Jsme oficiálním montážním partnerem firmy Jablotron a certifikovaným partnerem firmy Hikvision, špičkou v zabezpečovacích systémech nejen v České republice - připojíme Vás přímo na pult centrální ochrany!</p>
@@ -106,9 +125,20 @@
                 <img src="images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Chytrý dům LOXONE">
             </div>
         </div>
+
+        <div class="about-us-content" id="ecosun">
+            <div class="about-us-text">
+                <h3><i class="fas fa-solar-panel"></i> Spolupráce s Ecosun</h3>
+                <p>Jsme hrdými partnery společnosti Ecosun, která je odborníkem na moderní vytápěcí systémy. Nabízíme řešení, která kombinují úspornost a šetrnost k životnímu prostředí.</p>
+            </div>
+            <div class="about-us-image">
+                <img src="images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Ecosun spolupráce">
+            </div>
+        </div>
     </div>
 </section>
 
+<!-- Proč nás -->
 <section class="why-us">
     <h2>Proč si vybrat nás</h2>
     <div class="reasons-container">
@@ -132,9 +162,15 @@
             <h3>Úspěšné projekty</h3>
             <p>Máme za sebou desítky realizací a spokojených zákazníků. Vaše spokojenost je pro nás na prvním místě.</p>
         </div>
+        <div class="reason">
+            <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Integrace">
+            <h3>Propojení systémů</h3>
+            <p>Specializujeme se na propojení všech systémů mezi sebou, ať už se jedná o zabezpečení, kamerové systémy nebo chytrou domácnost. Váš domov bude fungovat jako jeden celek.</p>
+        </div>
     </div>
 </section>
 
+<!-- Často kladené dotazy -->
 <section class="faq">
     <h2>Často kladené dotazy</h2>
     <div class="faq-container">
@@ -153,6 +189,7 @@
     </div>
 </section>
 
+<!-- Realizace -->
 <section class="reviews" id="realizace">
     <h2>Realizace</h2>
     <div class="testimonial-slider">
@@ -204,90 +241,84 @@
 
 <section id="technicke-specifikace" class="new-style">
     <h2>Technické specifikace našich systémů</h2>
+    
+    <!-- Sekce EZS -->
     <div class="spec-section">
-        <h3>Chytré domácnosti (LOXONE)</h3>
+        <h3>Zabezpečovací systémy (EZS)</h3>
         <div class="spec-item">
-            <i class="fas fa-server"></i>
-            <p><strong>Miniserver:</strong> Centrální jednotka, která integruje všechny funkce chytré domácnosti. Umožňuje řízení osvětlení, vytápění, stínění, zabezpečení a dalších systémů.</p>
+            <i class="fas fa-lock"></i>
+            <p><strong>Jablotron:</strong> Komplexní řešení zabezpečení domácností a firem s možností vzdálené správy a integrace s chytrou domácností.</p>
             <div class="image-container">
-                <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Miniserver" class="spec-image">
+                <img src="./images/jablotron-logo.png" alt="Jablotron" class="spec-image">
             </div>
         </div>
         <div class="spec-item">
-            <i class="fas fa-sun"></i>
-            <p><strong>Exosphere:</strong> Pokročilý systém pro řízení energie, který optimalizuje spotřebu a šetří náklady na energii. Integruje obnovitelné zdroje energie, jako jsou solární panely, a umožňuje efektivní správu energie v domácnosti.</p>
+            <i class="fas fa-lock"></i>
+            <p><strong>Hikvision - AX PRO:</strong> Bezdrátový zabezpečovací systém s pokročilými senzory a funkcemi pro maximální ochranu.</p>
             <div class="image-container">
-                <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Exosphere" class="spec-image">
+                <img src="./images/Hikvision-logo.png" alt="Hikvision AX PRO" class="spec-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Sekce CCTV -->
+    <div class="spec-section">
+        <h3>Kamerové systémy (CCTV)</h3>
+        <div class="spec-item">
+            <i class="fas fa-video"></i>
+            <p><strong>Hikvision:</strong> Špičkové kamerové systémy s vysokým rozlišením a inteligentními funkcemi, jako je detekce pohybu a rozpoznávání tváře.</p>
+            <div class="image-container">
+                <img src="./images/Hikvision-logo.png" alt="Hikvision" class="spec-image">
             </div>
         </div>
         <div class="spec-item">
             <i class="fas fa-video"></i>
-            <p><strong>Intercom:</strong> Inteligentní dveřní komunikátor, který umožňuje obousměrnou komunikaci a video přenos. Lze jej integrovat s Touch Pure Flex pro komplexní přístupový systém.</p>
+            <p><strong>Dahua:</strong> Pokročilé kamerové systémy s podporou nočního vidění, širokým záběrem a integrovanou analýzou videa.</p>
             <div class="image-container">
-                <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Intercom" class="spec-image">
+                <img src="./images/Dahua-logo.png" alt="Dahua" class="spec-image">
             </div>
         </div>
         <div class="spec-item">
-            <i class="fas fa-th-large"></i>
-            <p><strong>Touch Pure Flex:</strong> Personalizované ovládací zařízení s až 12 dotykovými body, které lze definovat a umístit podle potřeby. Umožňuje ovládání různých funkcí, jako je osvětlení, stínění nebo vytápění.</p>
+            <i class="fas fa-video"></i>
+            <p><strong>Ubiquiti:</strong> Moderní kamerové systémy s jednoduchou správou přes UniFi Controller a vysokou kvalitou záznamu.</p>
             <div class="image-container">
-                <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Touch Pure Flex" class="spec-image">
+                <img src="./images/Ubiquiti_Logo.png" alt="Ubiquiti" class="spec-image">
             </div>
         </div>
     </div>
+
+    <!-- Sekce WiFi -->
     <div class="spec-section">
-        <h3>Oblasti použití</h3>
+        <h3>WiFi pro celý dům</h3>
         <div class="spec-item">
-            <i class="fas fa-music"></i>
-            <p><strong>Audio:</strong> Integrované audio systémy pro kvalitní zvukové zážitky v celém domě.</p>
+            <i class="fas fa-wifi"></i>
+            <p><strong>Ubiquiti - UniFi systém:</strong> Profesionální WiFi řešení pro rozsáhlé pokrytí a stabilní připojení v celém domě.</p>
             <div class="image-container">
-                <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Audio" class="spec-image">
+                <img src="./images/Ubiquiti_Logo.png" alt="Ubiquiti UniFi" class="spec-image">
             </div>
         </div>
         <div class="spec-item">
-            <i class="fas fa-bolt"></i>
-            <p><strong>Energetický management:</strong> Optimalizace spotřeby energie a integrace obnovitelných zdrojů pro efektivní správu energie.</p>
+            <i class="fas fa-wifi"></i>
+            <p><strong>TP-Link - Omada systém:</strong> Cenově dostupný systém pro správu WiFi s vysokým výkonem a snadnou konfigurací.</p>
             <div class="image-container">
-                <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Energetický management" class="spec-image">
+                <img src="./images/TP-link-logo.png" alt="TP-Link Omada" class="spec-image">
             </div>
         </div>
+    </div>
+
+    <!-- Sekce Chytrá domácnost -->
+    <div class="spec-section">
+        <h3>Chytrá domácnost</h3>
         <div class="spec-item">
-            <i class="fas fa-lightbulb"></i>
-            <p><strong>Osvětlení:</strong> Inteligentní řízení osvětlení pro vytvoření ideální atmosféry a úsporu energie.</p>
+            <i class="fas fa-home"></i>
+            <p><strong>Loxone:</strong> Komplexní systém pro chytré domácnosti, který umožňuje integraci osvětlení, vytápění, stínění, zabezpečení, audia a dalších systémů. Loxone přináší vysoký komfort, bezpečnost a úsporu energie.</p>
             <div class="image-container">
-                <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Osvětlení" class="spec-image">
-            </div>
-        </div>
-        <div class="spec-item">
-            <i class="fas fa-shield-alt"></i>
-            <p><strong>Zabezpečení:</strong> Pokročilé systémy pro ochranu domácnosti před vloupáním, požárem nebo únikem vody.</p>
-            <div class="image-container">
-                <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Zabezpečení" class="spec-image">
-            </div>
-        </div>
-        <div class="spec-item">
-            <i class="fas fa-thermometer-half"></i>
-            <p><strong>Vnitřní klima:</strong> Harmonizace vytápění, chlazení a větrání pro dosažení optimálního vnitřního prostředí.</p>
-            <div class="image-container">
-                <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Vnitřní klima" class="spec-image">
-            </div>
-        </div>
-        <div class="spec-item">
-            <i class="fas fa-cogs"></i>
-            <p><strong>Stínění:</strong> Automatizace žaluzií a rolet pro regulaci světla a tepla v interiéru.</p>
-            <div class="image-container">
-                <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Stínění" class="spec-image">
-            </div>
-        </div>
-        <div class="spec-item">
-            <i class="fas fa-key"></i>
-            <p><strong>Přístup:</strong> Řízení přístupu do objektu pomocí inteligentních dveřních systémů a kódových zámků.</p>
-            <div class="image-container">
-                <img src="./images/pngtree-example-sample-grungy-stamp-vector-png-image_15560590.png" alt="Přístup" class="spec-image">
+                <img src="./images/Loxone-logo.png" alt="Loxone" class="spec-image">
             </div>
         </div>
     </div>
 </section>
+
 
 
 
@@ -296,27 +327,43 @@
     <div class="contact-option">
         <h3>Nevíte, co přesně byste chtěli nebo potřebovali?</h3>
         <p>Zanechte nám kontakt a my se Vám ozveme.</p>
-        <form action="process-form1.php" method="POST" class="contact-form">
+        <form action="./php/process-form1.php" method="POST" class="contact-form">
             <label for="name1">Vaše jméno:</label>
             <input type="text" id="name1" name="name" required>
             
             <label for="contact1">Váš e-mail nebo telefon:</label>
             <input type="text" id="contact1" name="contact" required>
             
+            <!-- Předmět dotazu -->
+            <label for="subject">Předmět dotazu:</label>
+            <select id="subject" name="subject" required>
+                <option value="">Vyberte předmět</option>
+                <option value="zabezpeceni">Zabezpečení</option>
+                <option value="kamery">Kamerové systémy</option>
+                <option value="wifi">Wi-Fi pro dům</option>
+                <option value="chytra-domacnost">Chytrá domácnost</option>
+                <option value="jiny">Jiný</option>
+            </select>
+        
+            <!-- Textové pole pro dotaz -->
+            <label for="message">Váš dotaz:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
             <button type="submit">Odeslat</button>
         </form>
     </div>
 </section>
 
+
 <footer>
     <div class="footer-image">
         <a href="#"><img src="./images/logo_BD_png-06.png" alt="logo"></a>
-        <p>© 2024 BDUM - Všechna práva vyhrazena</p>
+        <p>© 2025 BDUM - Všechna práva vyhrazena</p>
         <p><i class="fas fa-envelope"></i> info@bdum.cz | <i class="fas fa-phone"></i> +420 723 368 821</p>
     </div>
 </footer>
 
-<script src="./jssoubory/scriptshowcase.js"></script>
+<script src="./jssoubory/reviews.js"></script>
 <script src="./jssoubory/smoothscroll.js"></script>
 <script src="./jssoubory/hamburgermenu.js"></script>
 <script src="./jssoubory/faq.js"></script>

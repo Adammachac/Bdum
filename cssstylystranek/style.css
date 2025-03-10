@@ -1,39 +1,65 @@
 /* Celkový vzhled stránky a písma */
 body {
-    font-family: 'Poppins', sans-serif; /* Používáme Poppins pro většinu textů */
+    font-family: 'Poppins', sans-serif; /* Jednotné písmo pro většinu textů */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #87DFE1;
+    background-color: #F8F9FA; /* Neutrální pozadí */
     color: #222; /* Tmavší text */
     overflow-x: hidden;
 }
 
-/* Recenze a další texty */
-.reviews h2,
-.showcase h1,
-.testimonial-slider .review-item p {
+@media only screen and (max-width: 768px) { /* Pro mobilní zařízení s šířkou do 768px */
+    .container { /* Předpokládám, že máš hlavní kontejner s tímto názvem */
+        display: flex;
+        justify-content: center; /* Horizontální střed */
+        align-items: center; /* Vertikální střed */
+        height: 100vh; /* Výška na celou obrazovku */
+        margin: 0 auto; /* Aby se to vešlo do středu */
+        padding: 0 20px; /* Přidání nějakého okraje */
+    }
+}
+
+/* Nadpisy a texty */
+h1, h2 {
+    font-family: 'Poppins', sans-serif; /* Konzistentní písmo pro nadpisy */
+    font-weight: 600;
+    color: #F8F9FA;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    animation: textAppear 1s ease-out forwards;
+}
+
+.reviews h2 {
+    font-size: 2rem;
+}
+
+/* Specifické texty */
+p, .testimonial-slider .review-item p {
     font-family: 'Poppins', sans-serif;
+    color: #444; /* Jemnější text pro čitelnost */
 }
 
-
-/* Specifické písmo pro kontaktní informace */
 .contact-info p {
-    font-family: 'Roboto', sans-serif; /* Pro kontakt použijeme Roboto */
+    font-family: 'Roboto', sans-serif; /* Odlišné písmo pro kontakt */
     font-size: 14px;
+    color: #555; /* Tónovaný text pro kontakt */
 }
 
-/* Další stylování pro showcase a recenze */
+/* Showcase sekce */
 .showcase {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 400px;
-    background-color: #fff; /* Bílé pozadí */
-    color: #444; /* Tmavší text pro lepší kontrast */
     text-align: center;
-    position: relative;
+    color: #444; /* Text uvnitř showcase */
+    background-color: #A0CFFF; /* Hlavní modrá */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .showcase-content {
@@ -46,17 +72,63 @@ body {
     height: 100px;
     transition: transform 0.3s ease-in-out;
 }
+@media (max-width: 768px) {
+    .showcase {
+        height: 300px; /* Snížení výšky showcase */
+    }
 
-h1 {
-    font-size: 2.5rem;
-    margin-top: 20px;
-    font-weight: 600;
-    animation: textAppear 1s ease-out forwards;
+    h1 {
+        font-size: 2rem; /* Zmenšení velikosti nadpisu */
+    }
+
+    .showcase-logo img {
+        height: 80px; /* Zmenšení loga */
+    }
+
+    body {
+        font-size: 14px; /* Zmenšení celkového písma pro menší obrazovky */
+    }
+}
+
+/* Pro mobily (šířka obrazovky 480px a méně) */
+@media (max-width: 480px) {
+    .showcase {
+        height: 250px; /* Ještě menší výška pro mobily */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Dále zmenšený nadpis */
+    }
+
+    .showcase-logo img {
+        height: 60px; /* Menší logo */
+    }
+
+    body {
+        font-size: 12px; /* Celkově menší text */
+        padding: 0 10px; /* Přidání paddingu na okraje */
+    }
+}
+
+/* Pro velké obrazovky (nad 1200px) */
+@media (min-width: 1200px) {
+    .showcase {
+        height: 500px; /* Zvýšení výšky showcase pro větší obrazovky */
+    }
+
+    h1 {
+        font-size: 3rem; /* Větší nadpis pro velké obrazovky */
+    }
+
+    .showcase-logo img {
+        height: 120px; /* Větší logo */
+    }
 }
 
 /* Styl pro sekci O nás */
 .about-us {
-    background-color: #fff;
+    background-color: #A0CFFF; 
     padding: 60px 20px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -72,7 +144,7 @@ h1 {
 /* Nadpisy v sekci O nás */
 .about-us h2 {
     font-size: 2.5rem;
-    color: #333;
+    color: #111; /* Hlavní modrá pro nadpisy */
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -81,7 +153,7 @@ h1 {
 .about-us p {
     font-size: 1.125rem;
     line-height: 1.6;
-    color: #555;
+    color: #555; /* Světlejší text pro lepší čitelnost */
     max-width: 900px;
     margin: 0 auto 20px;
 }
@@ -92,6 +164,7 @@ h1 {
     flex-wrap: wrap;
     gap: 40px;
     margin-bottom: 40px;
+    background-color: #E3F2FD;
 }
 
 .about-us-text {
@@ -99,6 +172,7 @@ h1 {
     min-width: 300px;
     padding: 20px;
     text-align: left;
+    border-radius: 10px;
 }
 
 .about-us-text:nth-child(odd) {
@@ -112,10 +186,8 @@ h1 {
 /* Přidané pozadí pro obrázky */
 .about-us-image {
     flex: 1;
-    min-width: 300px;
     padding: 20px;
     text-align: center;
-    background-color: #e6f7ff; /* Světle modré pozadí */
     border-radius: 10px;
 }
 
@@ -124,213 +196,69 @@ h1 {
     height: auto;
     border-radius: 10px;
 }
-
-/* Malé úpravy pro mobilní verzi */
-@media screen and (max-width: 768px) {
+/* Tablety (max-width: 768px) */
+@media (max-width: 768px) {
     .about-us h2 {
-        font-size: 2rem;
-    }
-
-    .about-us p {
-        font-size: 1rem;
+        font-size: 2rem; /* Menší nadpis na tabletech */
     }
 
     .about-us-content {
-        flex-direction: column;
         gap: 20px;
     }
 
-    .about-us-text {
-        text-align: center;
+    .about-us-text,
+    .about-us-image {
+        max-width: 100%; /* Uvolnění šířky pro malé obrazovky */
+        padding: 15px; /* Menší padding */
     }
 }
 
-/* Recenze */
-.reviews {
-    background-color: #f4f4f4;
-    padding: 40px;
-    text-align: center;
-}
-
-.reviews h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.testimonial-slider {
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.testimonial-slider-wrapper {
-    display: flex;
-    animation: slide 40s infinite linear;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
+/* Mobily (max-width: 480px) */
+@media (max-width: 480px) {
+    .about-us {
+        padding: 40px 10px; /* Zmenšení paddingu sekce */
     }
-    100% {
-        transform: translateX(-100%);
+
+    .about-us h2 {
+        font-size: 1.75rem; /* Zmenšený nadpis */
     }
-}
-.review-item {
-    min-width: 300px;
-    padding: 20px;
-    margin: 0 10px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-}
 
-.review-item img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
+    .about-us p {
+        font-size: 1rem; /* Menší písmo pro texty */
+        line-height: 1.5;
+    }
 
-.review-item p {
-    font-size: 1.1rem;
-    color: #333;
-}
+    .about-us-content {
+        flex-direction: column; /* Zarovnání boxů pod sebe */
+        gap: 15px; /* Menší mezera */
+    }
 
-.review-item p:last-child {
-    font-style: italic;
-    color: #666;
-}
+    .about-us-text,
+    .about-us-image {
+        max-width: 100%; /* Roztažení na plnou šířku */
+        text-align: center; /* Zarovnání textu na střed */
+        padding: 10px; /* Ještě menší padding */
+    }
 
-
-/* Sekce o nás s fotkami a textem */
-.about-section {
-    padding: 50px 20px;
-    background-color: #95F2D9;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.about-column {
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
-    max-width: 48%;
-    margin-bottom: 20px;
-    background-color: #e6f7ff; /* Světle modré pozadí */
-}
-
-.about-column img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.about-column h3 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.about-column p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-}
-
-@media (max-width: 768px) {
-    .about-column {
-        max-width: 100%;
+    .about-us-image img {
+        border-radius: 8px; /* Lehké zmenšení zaoblení na mobilu */
     }
 }
 
-/* Stylování pro sekci s formuláři */
-.contact-section {
-    padding: 60px 20px;
-    background-color: #f4f7fb;
-    margin: 50px auto;
-    max-width: 1750px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between; /* Formuláře vedle sebe */
-    gap: 40px;
-}
 
-.contact-option {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-}
-
-.contact-option h3 {
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 1.5rem;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-.contact-form button {
-    background-color: #4b9cd3;
-    color: #fff;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #3578b2;
-}
-
-
-/* Efekt kolem boxu při najetí myší */
-.contact-column:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    border-color: #4b9cd3;
-    transform: translateY(-3px);
-    transition: 0.3s ease;
-}
-
-/* Přizpůsobení pro mobilní zařízení */
-@media (max-width: 768px) {
-    .contact-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .contact-column {
-        max-width: 100%;
-    }
-}
-
-/* styl pro sekci proč si vybrat nás */
-
+/* Pro sekci "Proč nás" */
 .why-us {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
+    background-color: #E3F2FD;
+    padding: 60px 20px;
     text-align: center;
+}
+
+.why-us h2 {
+    font-size: 2.5rem;
+    color: #2e3a59;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 
 .reasons-container {
@@ -359,10 +287,18 @@ h1 {
     transform: scale(1.05);
 }
 
+/* Často kladené dotazy */
 .faq {
     padding: 40px 20px;
-    background-color: #ffffff;
+    background-color: #A0CFFF;
     text-align: center;
+}
+.faq h2 {
+    font-size: 2.5rem;
+    color: #2e3a59;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 
 .faq-container {
@@ -439,9 +375,308 @@ h1 {
 .faq-item.open p {
     display: block; /* Zobrazení odpovědi při rozbalení */
 }
+
+
+/* Responzivní stylování pro menší obrazovky */
+@media (max-width: 768px) {
+    .about-us-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-us-text {
+        padding: 10px 0;
+    }
+
+    .about-us-image img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .reason {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-container {
+        padding: 10px;
+    }
+
+    .about-us-content {
+        padding: 10px 5px;
+    }
+
+    .about-us-image img {
+        max-width: 100%;
+    }
+
+    .reason {
+        min-width: 100%;
+    }
+}
+
+
+/* Realiazce */
+.reviews {
+    background-color: #E3F2FD;
+    padding: 40px;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 2.5rem;
+    color: #2e3a59;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.testimonial-slider-wrapper {
+    display: flex;
+    animation: slide 40s infinite linear;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.review-item {
+    min-width: 300px;
+    padding: 20px;
+    margin: 0 10px;
+    background-color: #F8F9FA;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.review-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.review-item p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.review-item p:last-child {
+    font-style: italic;
+    color: #666;
+}
+
+
+/* Sekce o nás s fotkami a textem */
+.about-section {
+    padding: 50px 20px;
+    background-color: #95F2D9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about-column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 48%;
+    margin-bottom: 20px;
+    background-color: #e6f7ff; /* Světle modré pozadí */
+}
+
+.about-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.about-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-column p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .about-column {
+        max-width: 100%;
+    }
+}
+
+/* Stylování pro sekci s formuláři */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #E3F2FD;
+    margin: 50px auto;
+    max-width: 1750px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap; /* Zajištění responzivity */
+
+}
+
+/* Styl pro jednotlivé sekce formulářů */
+.contact-option {
+    background-color: #E3F2FD;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px; /* Nastavení minimální šířky */
+}
+
+/* Nadpisy v sekcích */
+.contact-section h3 {
+    font-size: 2.5rem;
+    color: #2e3a59;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-option p {    
+    font-size: 1.5rem;
+    color: #2e3a59;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+
+/* Styl pro formulář */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Styl pro textová pole a textová oblast */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #A0CFFF;
+    font-size: 1rem;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Styl pro textová oblast */
+.contact-form textarea {
+    resize: vertical; /* Povolit vertikální změnu velikosti */
+    min-height: 100px;
+}
+
+/* Styl pro tlačítko */
+.contact-form button {
+    background-color: #4b9cd3;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #3578b2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styl při zaostření na pole */
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: #4b9cd3;
+    box-shadow: 0 0 5px rgba(75, 156, 211, 0.5);
+    outline: none;
+}
+
+/* Efekt kolem boxu při najetí myší */
+.contact-column:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-color: #4b9cd3;
+    transform: translateY(-3px);
+    transition: 0.3s ease;
+}
+/* Tablety (max-width: 768px) */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 10px; /* Snížení paddingu */
+        gap: 15px;
+    }
+
+    .contact-option {
+        padding: 20px;
+        min-width: 250px; /* Zmenšení minimální šířky */
+    }
+
+    .contact-section h3 {
+        font-size: 2rem; /* Zmenšení nadpisů */
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 0.9rem; /* Zmenšení textů ve formuláři */
+        padding: 10px;
+    }
+}
+
+/* Mobily (max-width: 480px) */
+@media (max-width: 480px) {
+    .contact-section {
+        flex-direction: column; /* Prvky zarovnány pod sebe */
+        padding: 20px 10px;
+    }
+
+    .contact-option {
+        margin-bottom: 20px; /* Větší mezera mezi boxy */
+        padding: 15px; /* Menší padding */
+    }
+
+    .contact-section h3 {
+        font-size: 1.75rem; /* Ještě menší nadpisy */
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 0.85rem; /* Další zmenšení textů */
+        padding: 8px;
+    }
+}
+
 /* Sekce technické specifikace */
 #technicke-specifikace.new-style {
-    background: #f4f7fb;
+    background: #E3F2FD;
     color: #333;
     padding: 40px;
     border-radius: 10px;
@@ -471,11 +706,6 @@ h1 {
     align-items: center;
 }
 
-.spec-section h3 i {
-    color: #28a745;
-    margin-right: 15px;
-}
-
 .spec-item {
     display: flex;
     align-items: center;
@@ -499,28 +729,67 @@ h1 {
     flex: 1;
 }
 
+/* Kontejner pro obrázky */
 .spec-image {
-    width: 80px; /* velikost obrázku */
-    height: 80px;
+    width: 300px; /* Zvýšená velikost obrázku */
+    height: 60px; /* Zvýšená velikost obrázku */
     margin-right: 20px;
-    border-radius: 50%;
+    object-fit: cover; /* Zajistí, že obrázky nebudou deformované */
 }
-
+/* Tablety (max-width: 768px) */
 @media (max-width: 768px) {
     #technicke-specifikace.new-style {
-        padding: 20px;
+        padding: 20px; /* Snížení paddingu pro užší obrazovky */
     }
-    
+
     #technicke-specifikace h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* Zmenšení nadpisu */
     }
-    
+
     .spec-section h3 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Zmenšení velikosti podnadpisu */
     }
-    
+
     .spec-item {
-        padding: 15px;
+        flex-direction: column; /* Zarovnání prvků pod sebe */
+        text-align: center; /* Vycentrování textu */
+    }
+
+    .spec-item i {
+        margin: 0 0 10px 0; /* Upravíme margin ikon */
+    }
+
+    .spec-image {
+        width: 100%; /* Obrázek zabere celou šířku */
+        height: auto; /* Automatická výška obrázku */
+        margin: 0 0 15px 0;
+    }
+}
+
+/* Mobily (max-width: 480px) */
+@media (max-width: 480px) {
+    #technicke-specifikace.new-style {
+        padding: 15px; /* Ještě menší padding */
+    }
+
+    #technicke-specifikace h2 {
+        font-size: 1.75rem; /* Další zmenšení nadpisu */
+    }
+
+    .spec-section h3 {
+        font-size: 1.25rem; /* Zmenšení podnadpisů */
+    }
+
+    .spec-item {
+        padding: 15px; /* Zmenšení paddingu v boxech */
+    }
+
+    .spec-item p {
+        font-size: 0.9rem; /* Zmenšení textu */
+    }
+
+    .spec-image {
+        margin: 0 auto 10px auto; /* Vycentrování obrázku */
     }
 }
 
@@ -568,28 +837,4 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
-}
-
-/* Dark-mode styl */
-body.dark-mode footer {
-    background-color: #1e1e1e; /* Tmavé pozadí */
-    color: #e0e0e0; /* Světlý text */
-    border-top: 1px solid #333; /* Jemná horní linka */
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5); /* Decentní stín */
-}
-
-body.dark-mode footer .footer-image a img {
-    filter: brightness(70%); /* Tmavší vzhled loga */
-}
-
-body.dark-mode footer .footer-image a img:hover {
-    filter: brightness(100%);
-}
-
-body.dark-mode footer p i {
-    color: #70b9ff; /* Světlejší modré ikony */
-}
-
-body.dark-mode footer a {
-    color: #70b9ff; /* Světlejší modré odkazy */
 }

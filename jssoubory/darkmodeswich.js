@@ -1,7 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.querySelector('#darkModeToggle'); // Přepínací tlačítko
+// Najdi přepínač
+const themeToggle = document.getElementById('theme');
 
-    toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode'); // Přidání/odebrání třídy
-    });
+// Přidání události při změně
+themeToggle.addEventListener('change', function () {
+    if (themeToggle.checked) {
+        // Zapni dark mode
+        document.body.classList.add('dark-mode');
+    } else {
+        // Vypni dark mode
+        document.body.classList.remove('dark-mode');
+    }
 });
+
